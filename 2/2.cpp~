@@ -1,0 +1,41 @@
+#define INF numeric_limits<int>::max()
+#define popcount __builtin_popcount
+#define gcd __gcd
+//#define NDEBUG
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef long long int ll;
+typedef vector<int> vi;
+typedef vector<ll> vll;
+typedef vector<string> vs;
+typedef vector<char> vc;
+typedef pair<int,int> ii;
+typedef pair<string,string> ss;
+typedef vector<ii> vii;
+typedef double db;
+typedef vector<db> vdb;
+typedef pair<db, db> dbdb;
+
+int main(){
+  int n;
+  scanf("%d", &n);
+  vector<vector<int> > M(n, vi(n));
+
+  for(int i=0; i<n; i++) {
+    for(int j=0; j<n; j++) {
+      scanf("%d", &M[i][j]);
+    }
+  }
+
+  int a = M[0][0];
+  for(int i=0; i<n-1; i++) {
+    M[0][i] = M[0][i+1];
+    M[i][n-1] = M[i+1][n-1];
+    M[n-1][n-i] = M[
+  }
+  return 0;
+}
+
